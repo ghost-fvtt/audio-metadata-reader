@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: MIT
 
 import { loadTitle } from '../../load-metadata.js';
+import { updatePlaylistSoundsWithTitles } from '../../update-playlist-sounds-with-titles.js';
 
 export function registerPlaylistDirectorySoundContextOptions() {
   Hooks.on('getPlaylistDirectorySoundContext', getPlaylistDirectorySoundContext);
@@ -35,27 +36,8 @@ function getPlaylistDirectoryEntryContext(html, entryOptions) {
     callback: async (li) => {
       const playlistId = li.parents('.playlist').data('document-id');
       const playlist = game.playlists.get(playlistId);
-      const sounds = playlist.sounds;
-      const total = sounds.size;
-      let loaded = 0;
-      const loadingMessage = game.i18n.localize('AUDIOMETADATAREADER.ProgressLoadingAudioMetadata');
-      const showProgress = () => {
-        SceneNavigation.displayProgressBar({
-          label: loadingMessage,
-          pct: Math.floor((loaded * 100) / total),
-        });
-      };
-      showProgress();
-
-      const toUpdate = [];
-      for (const sound of sounds) {
-        const soundData = { name: await loadTitle(sound.path), _id: sound.id };
-        loaded += 1;
-        showProgress();
-        toUpdate.push(soundData);
-      }
-
-      await playlist.updateEmbeddedDocuments('PlaylistSound', toUpdate);
+      const sounds = playlist.sounds.contents;
+      return updatePlaylistSoundsWithTitles(playlist, sounds);
     },
   });
 }

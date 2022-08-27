@@ -3,7 +3,7 @@
 // SPDX-License-Identifier: MIT
 
 import { packageId } from '../../constants.js';
-import { loadTitle } from '../../load-metadata.js';
+import { updatePlaylistSoundsWithTitles } from '../../update-playlist-sounds-with-titles.js';
 
 export function registerPlaylistConfig() {
   Hooks.once('init', () => {
@@ -23,51 +23,16 @@ class PlaylistConfigWithAutoloadSoundTitles extends PlaylistConfig {
     });
     const playlist = this.object;
     const currentSources = new Set(playlist.sounds.map((s) => s.path));
-    const files = contents.files.filter((src) => AudioHelper.hasAudioExtension(src) && !currentSources.has(src));
-    const total = files.length;
-    let loaded = 0;
-    const loadingMessage = game.i18n.localize('AUDIOMETADATAREADER.ProgressLoadingAudioMetadata');
-    const showProgress = () => {
-      SceneNavigation.displayProgressBar({
-        label: loadingMessage,
-        pct: Math.floor((loaded * 100) / total),
-      });
-    };
-    showProgress();
-
-    const toCreate = [];
-    for (const src of files) {
-      const soundData = { name: (await loadTitle(src)) ?? AudioHelper.getDefaultSoundName(src), path: src };
-      loaded += 1;
-      showProgress();
-      toCreate.push(soundData);
-    }
-
-    // const toCreate = await Promise.all(
-    //   files.map(async (src) => {
-    //     const soundData = { name: (await loadTitle(src)) ?? AudioHelper.getDefaultSoundName(src), path: src };
-    //     loaded += 1;
-    //     showProgress();
-    //     return soundData;
-    //   }),
-    // );
-
-    // const toCreate = [];
-    // for (const srcs of chunks(files, 10)) {
-    //   const soundDatas = await Promise.all(
-    //     srcs.map(async (src) => {
-    //       const soundData = { name: (await loadTitle(src)) ?? AudioHelper.getDefaultSoundName(src), path: src };
-    //       loaded += 1;
-    //       showProgress();
-    //       return soundData;
-    //     }),
-    //   );
-    //   toCreate.push(...soundDatas);
-    // }
-
+    const toCreate = contents.files.reduce((arr, src) => {
+      if (!AudioHelper.hasAudioExtension(src) || currentSources.has(src)) return arr;
+      const soundData = { name: AudioHelper.getDefaultSoundName(src), path: src };
+      arr.push(soundData);
+      return arr;
+    }, []);
     if (toCreate.length) {
       ui.playlists._expanded.add(playlist.id);
-      return playlist.createEmbeddedDocuments('PlaylistSound', toCreate);
+      const sounds = await playlist.createEmbeddedDocuments('PlaylistSound', toCreate);
+      return updatePlaylistSoundsWithTitles(playlist, sounds);
     } else {
       const warning = game.i18n.format('PLAYLIST.BulkImportWarning', { path: filePicker.target });
       return ui.notifications.warn(warning);
