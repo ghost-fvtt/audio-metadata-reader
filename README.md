@@ -4,7 +4,7 @@ SPDX-FileCopyrightText: 2022 Johannes Loher
 SPDX-License-Identifier: MIT
 -->
 
-# Azdio Metadat Reader
+# Audio Metadat Reader
 
 [![Checks](https://github.com/ghost-fvtt/audio-metadata-reader/workflows/Checks/badge.svg)](https://github.com/ghost-fvtt/audio-metadata-reader/actions)
 ![Supported Foundry Versions](https://img.shields.io/endpoint?url=https://foundryshields.com/version?url=https://github.com/ghost-fvtt/audio-metadata-reader/releases/latest/download/module.json)
