@@ -23,6 +23,16 @@ To install and use Audio Metadata Reader, simply paste the following URL into th
 
 https://github.com/ghost-fvtt/audio-metadata-reader/releases/latest/download/module.json
 
+## Usage
+
+This module adds a new Sheets for Playlists and Playlist Sounds that change the behavior when importing audio files so
+that the name of the playlist sounds is set to the title from the metadata of the file. By default, the sheets are
+registered as default sheets, but it can be controlled via settings.
+
+The Playlist Sound sheet also has a button next to the input field for the name to replace the current name with the
+title from metadata.
+
+Additionally, there are also context menu entries for Playlists and Playlist Sounds to achieve the same thing.
 
 ## Development
 
