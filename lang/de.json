@@ -1,0 +1,16 @@
+{
+  "AUDIOMETADATAREADER.PlalistConfigLabel": "Audio Metadata Reader Wiedergabeliste-Bogen",
+  "AUDIOMETADATAREADER.ProgressLoadingAudioMetadata": "Lade Audio Metadaten",
+
+  "AUDIOMETADATAREADER.PlalistSoundConfigLabel": "Audio Metadata Reader Wiedergabeliste-Eintrag-Bogen",
+  "AUDIOMETADATAREADER.ButtonLoadTitle": "Lade Metadaten um den Titel als Namen zu verwenden (die Änderung muss danach noch durch Klicken auf '{soundUpdate}' gespeichert werden)",
+  "AUDIOMETADATAREADER.WarningCouldNotLoadTitle": "Konnte den Titel für '{path}' nicht laden",
+
+  "AUDIOMETADATAREADER.ContextUpdateTitleFromMetadata": "Aktualisiere den Titel aus Metadaten",
+  "AUDIOMETADATAREADER.ContextUpdateTitlesFromMetadata": "Aktualisiere die Titel aus Metadaten",
+
+  "AUDIOMETADATAREADER.SettingSetDefaultPlaylistSheetName": "Standard Wiedergabeliste-Bogen Setzen",
+  "AUDIOMETADATAREADER.SettingSetDefaultPlaylistSheetHint": "Registriere den Wiedergabeliste-Bogen als Standardbogen. Er enthält Funktionalität um die Namen von von Wiedergabeliste Einträgen beim Massenimport automatisch an Hand der Titel aus Metadata festzulegen. Bitte beachte, dass das Laden der Metadaten etwas dauern kann, wen viele Einträge gleichzeitig importert werden.",
+  "AUDIOMETADATAREADER.SettingSetDefaultPlaylistSoundSheetName": "Standard Wiedergabeliste-Eintrag-Bogen Setzen",
+  "AUDIOMETADATAREADER.SettingSetDefaultPlaylistSoundSheetHint": "Registriere den Wiedergabeliste-Eintrag-Bogen als Standardbogen. Er enthält Funktionalität um den Titel automatisch aus den Metadata zu laden, wenn die AUdioquelle erstaml festgelegt wird. Außerdem kann der Titel per Knopfdruck aus den Metadata geladen werden."
+}
