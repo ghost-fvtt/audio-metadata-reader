@@ -25,7 +25,7 @@ https://github.com/ghost-fvtt/audio-metadata-reader/releases/latest/download/mod
 
 ## Usage
 
-This module adds a new Sheets for Playlists and Playlist Sounds that change the behavior when importing audio files so
+This module adds a new Sheets for Playlists and Playlist Sounds, that change the behavior when importing audio files, so
 that the name of the playlist sounds is set to the title from the metadata of the file. By default, the sheets are
 registered as default sheets, but it can be controlled via settings.
 
