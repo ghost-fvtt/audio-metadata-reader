@@ -1,0 +1,11 @@
+# SPDX-FileCopyrightText: 2022 Johannes Loher
+#
+# SPDX-License-Identifier: MIT
+
+node_modules/
+common
+client
+foundry.js
+dist/
+.vscode/
+foundryconfig.json

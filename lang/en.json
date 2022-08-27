@@ -1,0 +1,15 @@
+{
+  "AUDIOMETADATAREADER.ButtonLoadTitle": "Load metadata to infer the track name from the title (you still need to click on the '{soundUpdate}' button to save)",
+  "AUDIOMETADATAREADER.WarningCouldNotLoadTitle": "Could not load the title for '{path}'",
+
+  "AUDIOMETADATAREADER.ContextUpdateTitleFromMetadata": "Update Title From Metadata",
+  "AUDIOMETADATAREADER.ContextUpdateTitlesFromMetadata": "Update Titles From Metadata",
+
+  "AUDIOMETADATAREADER.PlalistConfigLabel": "Audio Metadata Reader Playlist Sheet",
+  "AUDIOMETADATAREADER.ProgressLoadingAudioMetadata": "Loading Audio Metadata",
+
+  "AUDIOMETADATAREADER.SettingSetDefaultPlaylistSheetName": "Set Default Playlist Sheet",
+  "AUDIOMETADATAREADER.SettingSetDefaultPlaylistSheetHint": "Register the custom playlist sheet as the default sheet. It automatically loads playlist sound titles from the metadata of the files when bulk importing sounds. Be aware that this can take quite a while when importing a lot of sounds at the same time.",
+  "AUDIOMETADATAREADER.SettingSetDefaultPlaylistSoundSheetName": "Set Default Playlist Sound Sheet",
+  "AUDIOMETADATAREADER.SettingSetDefaultPlaylistSoundSheetHint": "Register the custom playlist sound sheet as the default sheet. It automatically loads the title from the metadata of the file, when initially setting the audio source path. It also includes a button to load the title from the metadata and replace the current one with it."
+}

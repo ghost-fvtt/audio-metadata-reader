@@ -1,0 +1,14 @@
+/*
+ * SPDX-FileCopyrightText: 2022 Johannes Loher
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+.audio-metadata-reader-infer-track-name {
+  order: 99;
+}
+
+.audio-metadata-reader-infer-track-name + input[type='text'] {
+  height: 28px;
+  margin-right: 5px !important;
+}
