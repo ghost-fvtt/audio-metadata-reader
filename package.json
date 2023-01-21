@@ -37,7 +37,7 @@
     "@commitlint/cli": "17.4.2",
     "@commitlint/config-conventional": "17.4.2",
     "@guanghechen/rollup-plugin-copy": "2.1.4",
-    "@rollup/plugin-commonjs": "24.0.0",
+    "@rollup/plugin-commonjs": "24.0.1",
     "@rollup/plugin-node-resolve": "15.0.1",
     "@typhonjs-fvtt/eslint-config-foundry.js": "0.8.0",
     "eslint": "8.32.0",
