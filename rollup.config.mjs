@@ -6,8 +6,8 @@ import copy from '@guanghechen/rollup-plugin-copy';
 import commonjs from '@rollup/plugin-commonjs';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import livereload from 'rollup-plugin-livereload';
-import styles from 'rollup-plugin-styles';
-import { terser } from 'rollup-plugin-terser';
+import styles from '@ironkinoko/rollup-plugin-styles';
+import terser from '@rollup/plugin-terser';
 
 import { distDirectory, name, sourceDirectory } from './tools/const.mjs';
 
