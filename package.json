@@ -37,7 +37,7 @@
     "@commitlint/cli": "17.7.1",
     "@commitlint/config-conventional": "17.7.0",
     "@ironkinoko/rollup-plugin-styles": "4.0.3",
-    "@guanghechen/rollup-plugin-copy": "5.0.6",
+    "@guanghechen/rollup-plugin-copy": "5.0.7",
     "@rollup/plugin-commonjs": "25.0.4",
     "@rollup/plugin-node-resolve": "15.2.1",
     "@rollup/plugin-terser": "0.4.3",
