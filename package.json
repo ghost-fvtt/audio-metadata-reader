@@ -61,6 +61,6 @@
   },
   "dependencies": {
     "jsmediatags": "3.9.7",
-    "parse-audio-metadata": "1.1.0"
+    "parse-audio-metadata": "1.2.0"
   }
 }
