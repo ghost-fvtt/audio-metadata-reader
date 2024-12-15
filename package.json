@@ -34,7 +34,7 @@
   },
   "homepage": "https://github.com/ghost-fvtt/audio-metadata-reader#readme",
   "devDependencies": {
-    "@commitlint/cli": "19.6.0",
+    "@commitlint/cli": "19.6.1",
     "@commitlint/config-conventional": "19.6.0",
     "@ironkinoko/rollup-plugin-styles": "4.0.3",
     "@guanghechen/rollup-plugin-copy": "6.0.2",
