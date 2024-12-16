@@ -39,7 +39,7 @@
     "@ironkinoko/rollup-plugin-styles": "4.0.3",
     "@guanghechen/rollup-plugin-copy": "6.0.2",
     "@rollup/plugin-commonjs": "28.0.2",
-    "@rollup/plugin-node-resolve": "15.3.0",
+    "@rollup/plugin-node-resolve": "15.3.1",
     "@rollup/plugin-terser": "0.4.4",
     "@typhonjs-fvtt/eslint-config-foundry.js": "0.8.0",
     "eslint": "8.57.1",
