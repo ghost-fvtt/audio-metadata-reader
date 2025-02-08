@@ -36,7 +36,7 @@
   "devDependencies": {
     "@commitlint/cli": "19.7.1",
     "@commitlint/config-conventional": "19.7.1",
-    "@ironkinoko/rollup-plugin-styles": "4.0.3",
+    "@ironkinoko/rollup-plugin-styles": "4.0.4",
     "@guanghechen/rollup-plugin-copy": "6.0.4",
     "@rollup/plugin-commonjs": "28.0.2",
     "@rollup/plugin-node-resolve": "16.0.0",
